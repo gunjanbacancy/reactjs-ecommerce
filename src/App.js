@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from "react-router-dom";
 import './App.css';
 import Header from './pages/Header';
 import Navbar from './pages/Navbar';
@@ -8,7 +9,7 @@ import Footer from './pages/Footer';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
       <Navbar />
       <div className="row">
@@ -16,7 +17,7 @@ function App() {
         <Sidebar />
       </div>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
