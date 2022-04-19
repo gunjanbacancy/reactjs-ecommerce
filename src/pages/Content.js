@@ -1,36 +1,24 @@
 import React, { Component } from 'react';
-import Greeting from './Greeting';
-
+import { Routes, Route } from "react-router-dom";
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import Products from './Products';
 
 class Content extends Component {
 
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: 0
-    }
-  }
-
-
-  handleIncrement = () => {
-    this.setState((prevState) => ({
-      counter: prevState.counter + 1
-    }));
-  }
- 
-  handleDecrement = () => {
-    this.setState((prevState) => ({
-      counter: prevState.counter - 1
-    }));
-  }
-
+  
 
   render() {
     return (
       <div className="main">
-
-        <div>
+        <Routes>
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+        {/* <div>
           <h2>Props in React JS</h2>
           <Greeting greeting={"Welcome to home page!"}/>
         </div>
@@ -54,7 +42,7 @@ class Content extends Component {
         <h5>elementum integer enim neque, Sep 21, 2018</h5>
         <div className="fakeimg" style={{ height: 200 }}>Image</div>
         <p>Bibendum est ultricies..</p>
-        <p>Semper quis lectus nulla at. Nullam ac tortor vitae purus faucibus ornare suspendisse. Nunc faucibus a pellentesque sit. Risus quis varius quam quisque id diam vel quam elementum.</p>
+        <p>Semper quis lectus nulla at. Nullam ac tortor vitae purus faucibus ornare suspendisse. Nunc faucibus a pellentesque sit. Risus quis varius quam quisque id diam vel quam elementum.</p> */}
       </div>
     );
   }
