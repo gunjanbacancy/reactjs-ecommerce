@@ -4,6 +4,7 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Products from './Products';
+import Category from './Category';
 
 class Content extends Component {
 
@@ -13,10 +14,11 @@ class Content extends Component {
     return (
       <div className="main">
         <Routes>
-          <Route path="/products" element={<Products />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/category/:id" element={<Category />} />
         </Routes>
         {/* <div>
           <h2>Props in React JS</h2>
